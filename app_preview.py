@@ -4,15 +4,13 @@ import matplotlib.pyplot as plt
 import streamlit as st
 import codecs
 
-archivo = st.file_uploader('Cargar archivo de texto .txt')
+#archivo = st.file_uploader('Cargar archivo de texto .txt')
+archivo = st.text_input('Inserte texto aqui:', 'texto')
 
 if archivo is not None:
-  with codecs.open(archivo, encoding='utf-8') as f:
-    contents = f.read()  
   
-  st.write(len(contents))
-  st.text(contents)
-
+  st.write(archivo)
+  
   len_pal, my_k, ancho, n_iter, margen = 5, 0.1, 15, 500, 0.04
 
   pares_df = pd.DataFrame([['Nodo 1', 'Nodo 2'], ['Nodo 2', 'Nodo 3'], ['Nodo 3', 'Nodo 1']], columns = ['col_a', 'col_b'])
