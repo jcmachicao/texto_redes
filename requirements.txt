@@ -3,4 +3,3 @@ spacy[es]
 pandas
 networkx
 matplotlib
-codecs
