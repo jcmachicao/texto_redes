@@ -3,6 +3,16 @@ import networkx as nx
 import matplotlib.pyplot as plt
 import streamlit as st
 
+archivo = st.file_uploader('Cargar archivo de texto .txt')
+
+texto = ''
+#with open(ruta + archivo, encoding='iso-8859-1') as f:
+with open(archivo) as f:
+  lines = f.readlines()
+  for li in lines:
+    texto += li
+texto
+
 len_pal, my_k, ancho, n_iter, margen = 5, 0.1, 15, 500, 0.04
 
 pares_df = pd.DataFrame([['Nodo 1', 'Nodo 2'], ['Nodo 2', 'Nodo 3'], ['Nodo 3', 'Nodo 1']], columns = ['col_a', 'col_b'])
