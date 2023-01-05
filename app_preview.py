@@ -11,6 +11,5 @@ pos = nx.spring_layout(G, k=my_k, iterations=n_iter)
 plt.figure()
 nx.draw_networkx_nodes(G, pos, node_color='yellow')
 nx.draw_networkx_edges(G, pos, edge_color='gray', width=5.0, alpha=0.3)
-nx.draw_networkx_labels(G, pos, labels, font_size=12)
 
 st.pyplot()
