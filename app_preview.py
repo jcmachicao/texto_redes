@@ -5,7 +5,7 @@ import streamlit as st
 
 f = st.file_uploader('Cargar archivo de texto .txt')
 
-if file is not None:
+if f is not None:
   texto = ''
   #with open(ruta + archivo, encoding='iso-8859-1') as f:
   lines = f.read()
