@@ -7,7 +7,7 @@ import codecs
 archivo = st.file_uploader('Cargar archivo de texto .txt')
 
 if archivo is not None:
-  with codecs.open(archivo, 'r', encoding='utf-8') as f:
+  with codecs.open(archivo, 'rb', encoding='utf-8') as f:
     contents = f.read()  
   
   st.write(len(contents))
