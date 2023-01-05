@@ -7,11 +7,9 @@ archivo = st.file_uploader('Cargar archivo de texto .txt')
 
 if archivo is not None:
   texto = ''
-  lines = f.readlines()
-  for li in lines:
-    texto += li
-
-  st.text(lines)
+  contents = archivo.read(encoding='utf-8')  
+  st.write(len(contents))
+  st.text(contents)
 
   len_pal, my_k, ancho, n_iter, margen = 5, 0.1, 15, 500, 0.04
 
