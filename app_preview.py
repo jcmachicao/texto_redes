@@ -7,11 +7,9 @@ f = st.file_uploader('Cargar archivo de texto .txt')
 
 texto = ''
 #with open(ruta + archivo, encoding='iso-8859-1') as f:
-lines = f.readlines()
-for li in lines:
-  texto += li
+lines = f.read()
 
-st.write(texto)
+st.write(lines)
 
 len_pal, my_k, ancho, n_iter, margen = 5, 0.1, 15, 500, 0.04
 
