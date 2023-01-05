@@ -1,6 +1,6 @@
 import pandas as pd
 import networkx as nx
-import matplotlib.pyplot as 
+import matplotlib.pyplot as plt
 import streamlit as st
 
 len_pal, my_k, ancho, n_iter, margen = 5, 0.1, 15, 500, 0.04
