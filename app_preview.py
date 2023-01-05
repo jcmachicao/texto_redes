@@ -13,4 +13,4 @@ fig, ax = plt.subplots()
 nx.draw_networkx_nodes(G, pos, node_color='yellow', ax=ax)
 nx.draw_networkx_edges(G, pos, edge_color='gray', width=5.0, alpha=0.3, ax=ax)
 
-st.matplotlib(fig)
+st.pyplot(fig)
