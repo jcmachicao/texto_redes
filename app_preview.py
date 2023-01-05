@@ -3,7 +3,7 @@ import networkx as nx
 import matplotlib.pyplot as plt
 import streamlit as st
 
-archivo = st.file_uploader('Cargar archivo de texto .txt')
+f = st.file_uploader('Cargar archivo de texto .txt')
 
 texto = ''
 #with open(ruta + archivo, encoding='iso-8859-1') as f:
