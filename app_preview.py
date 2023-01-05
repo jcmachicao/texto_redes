@@ -11,7 +11,8 @@ with open(archivo) as f:
   lines = f.readlines()
   for li in lines:
     texto += li
-texto
+
+st.write(texto)
 
 len_pal, my_k, ancho, n_iter, margen = 5, 0.1, 15, 500, 0.04
 
