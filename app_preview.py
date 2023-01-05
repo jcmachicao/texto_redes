@@ -7,10 +7,9 @@ archivo = st.file_uploader('Cargar archivo de texto .txt')
 
 if archivo is not None:
   texto = ''
-  with open(archivo, encoding='iso-8859-1') as f:
-    lines = f.readlines()
-    for li in lines:
-      texto += li
+  lines = f.readlines()
+  for li in lines:
+    texto += li
 
   st.text(lines)
 
