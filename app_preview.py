@@ -9,7 +9,7 @@ texto = ''
 #with open(ruta + archivo, encoding='iso-8859-1') as f:
 lines = f.read()
 
-st.write(lines)
+st.text(lines)
 
 len_pal, my_k, ancho, n_iter, margen = 5, 0.1, 15, 500, 0.04
 
