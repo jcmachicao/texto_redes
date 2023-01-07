@@ -8,7 +8,7 @@ import subprocess
 import es_core_news_sm
 nlp = es_core_news_sm.load()
 
-len_pal, my_k, ancho, n_iter, margen = 5, 0.1, 15, 500, 0.04
+len_pal, my_k, ancho, n_iter, margen = 5, 0.1, 10, 500, 0.04
 
 #archivo = st.file_uploader('Cargar archivo de texto .txt')
 archivo = st.text_input('Inserte texto aqui:', '')
@@ -41,6 +41,10 @@ if archivo is not None:
   
   G = nx.from_pandas_edgelist(pares_df, 'col_a', 'col_b')
   pos = nx.spring_layout(G, k=my_k, iterations=n_iter)
+  
+  fig, ax = plt.subplots()
+  plt.figure(figsize=(ancho*2, ancho*2), facecolor='lightgray')
+  nx.draw_networkx_nodes(G, pos, node_color='yellow')
   
   labels = {}
   for node in G.nodes():
