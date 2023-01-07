@@ -14,6 +14,23 @@ if archivo is not None:
   oraciones = archivo.split('.')
   st.write('El número de oraciones de este texto es: ', len(oraciones))
   
+  depur_tot = pd.DataFrame()
+  pares = []
+  for ora in oraciones:
+    depur = []
+    doc = nlp(ora.lower())
+    for t in doc:
+      if len(t.text) > len_pal:
+        if t.pos_ in ['NOUN', 'VERB']:
+          depur.append([t.lemma_, t.pos_])
+    depur_df = pd.DataFrame(depur, columns=['pal', 'gram'])
+    pals = list(depur_df.pal)
+    for j in range(len(pals)-1):
+      pares.append([pals[j], pals[j+1]])
+    depur_tot = pd.concat([depur_tot, depur_df], axis=0)
+  
+  st.dataframe(depur_tot)
+  
   len_pal, my_k, ancho, n_iter, margen = 5, 0.1, 15, 500, 0.04
 
   pares_df = pd.DataFrame([['Nodo 1', 'Nodo 2'], ['Nodo 2', 'Nodo 3'], ['Nodo 3', 'Nodo 1']], columns = ['col_a', 'col_b'])
