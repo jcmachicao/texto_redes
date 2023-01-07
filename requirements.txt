@@ -3,5 +3,4 @@ spacy[es]
 pandas
 networkx
 matplotlib
-subprocess
 es_core_news_sm
