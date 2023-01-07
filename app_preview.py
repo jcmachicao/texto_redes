@@ -47,6 +47,7 @@ if archivo is not None:
   nx.draw_networkx_nodes(G, pos, node_color='yellow')
   
   st.pyplot(fig)
+  st.ballons()
   
   labels = {}
   for node in G.nodes():
