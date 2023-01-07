@@ -11,7 +11,7 @@ nlp = es_core_news_sm.load()
 len_pal, my_k, ancho, n_iter, margen = 5, 0.1, 12, 500, 0.04
 
 #archivo = st.file_uploader('Cargar archivo de texto .txt')
-archivo = st.text_input('Inserte texto aqui:', '')
+archivo = st.text_area('Inserte texto aqui:', '')
 
 if archivo is not None:
   
@@ -37,7 +37,7 @@ if archivo is not None:
     depur_tot = pd.concat([depur_tot, depur_df], axis=0)
     
   pares_df = pd.DataFrame(pares, columns=['col_a', 'col_b'])
-  st.dataframe(depur_tot.head())
+  #st.dataframe(depur_tot.head())
   
   G = nx.from_pandas_edgelist(pares_df, 'col_a', 'col_b')
   pos = nx.spring_layout(G, k=my_k, iterations=n_iter)
