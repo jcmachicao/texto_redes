@@ -17,6 +17,7 @@ if archivo is not None:
   depur_tot = pd.DataFrame()
   pares = []
   for ora in oraciones:
+    st.write(ora)
     depur = []
     doc = nlp(ora.lower())
     for t in doc:
