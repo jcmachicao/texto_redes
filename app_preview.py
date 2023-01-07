@@ -61,7 +61,8 @@ if archivo is not None:
   fig, ax = plt.subplots()
   
   plt.figure(figsize=(ancho*2, ancho*2), facecolor='lightgray')
-  nx.draw_networkx_nodes(G, pos, node_size=sizes_btw, node_color='yellow')
+  #nx.draw_networkx_nodes(G, pos, node_size=sizes_btw, node_color='yellow')
+  nx.draw_networkx_nodes(G, pos, node_size=10, node_color='yellow')
   nx.draw_networkx_edges(G, pos, edge_color='gray', width=5.0, alpha=0.3)
   nx.draw_networkx_labels(G, pos, labels, font_size=12)
   
