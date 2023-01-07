@@ -3,3 +3,4 @@ spacy[es]
 pandas
 networkx
 matplotlib
+subprocess
