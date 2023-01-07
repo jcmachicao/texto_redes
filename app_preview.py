@@ -8,7 +8,7 @@ import subprocess
 import es_core_news_sm
 nlp = es_core_news_sm.load()
 
-len_pal, my_k, ancho, n_iter, margen = 5, 0.1, 10, 500, 0.04
+len_pal, my_k, ancho, n_iter, margen = 5, 0.1, 12, 500, 0.04
 
 #archivo = st.file_uploader('Cargar archivo de texto .txt')
 archivo = st.text_input('Inserte texto aqui:', '')
@@ -54,7 +54,7 @@ if archivo is not None:
   for g in G.nodes.values():
     sizes_btw.append(int(g['size']*3000))
   
-  fig, ax = plt.subplots()
+  fig, ax = plt.subplots(figsize=(ancho, ancho))
   nx.draw_networkx_nodes(G, pos, node_size=sizes_btw, node_color='yellow')
   nx.draw_networkx_edges(G, pos, edge_color='gray', width=5.0, alpha=0.3)
   for node, label in nx.draw_networkx_labels(G, pos, labels, font_size=9).items():
