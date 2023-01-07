@@ -11,7 +11,7 @@ nlp = es_core_news_sm.load()
 len_pal, my_k, ancho, n_iter, margen = 5, 0.1, 15, 500, 0.04
 
 #archivo = st.file_uploader('Cargar archivo de texto .txt')
-archivo = st.text_input('Inserte texto aqui:', 'texto')
+archivo = st.text_input('Inserte texto aqui:', '')
 
 if archivo is not None:
   
