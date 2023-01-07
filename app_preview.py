@@ -46,6 +46,8 @@ if archivo is not None:
   plt.figure(figsize=(ancho*2, ancho*2), facecolor='lightgray')
   nx.draw_networkx_nodes(G, pos, node_color='yellow')
   
+  st.pyplot(fig)
+  
   labels = {}
   for node in G.nodes():
     labels[node] = node
