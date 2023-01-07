@@ -57,7 +57,7 @@ if archivo is not None:
   fig, ax = plt.subplots()
   nx.draw_networkx_nodes(G, pos, node_size=sizes_btw, node_color='yellow')
   nx.draw_networkx_edges(G, pos, edge_color='gray', width=5.0, alpha=0.3)
-  nx.draw_networkx_labels(G, pos, labels, font_size=9)
-  for node, label in nx.draw_networkx_labels(G, pos).items():
+  nx.draw_networkx_labels(G, pos)
+  for node, label in nx.draw_networkx_labels(G, pos, labels, font_size=9).items():
     label.set_rotation(45)
   st.pyplot(fig)
