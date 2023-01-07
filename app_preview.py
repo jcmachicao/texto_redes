@@ -5,8 +5,8 @@ import streamlit as st
 import codecs
 import spacy
 import subprocess
-
-subprocess.run(['pip', 'install', 'es_core_news_md'])
+import es_core_news_sm
+nlp = es_core_news_sm.load()
 
 #archivo = st.file_uploader('Cargar archivo de texto .txt')
 archivo = st.text_input('Inserte texto aqui:', 'texto')
