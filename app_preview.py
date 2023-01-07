@@ -10,6 +10,7 @@ nlp = es_core_news_sm.load()
 
 len_pal, my_k, ancho, n_iter, margen = 5, 0.1, 12, 500, 0.04
 
+st.title('Organizador de verbos y sujetos en un texto complejo')
 #archivo = st.file_uploader('Cargar archivo de texto .txt')
 archivo = st.text_area('Inserte texto aqui:', '')
 
