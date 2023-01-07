@@ -6,7 +6,7 @@ import codecs
 import spacy
 import subprocess
 
-subproces.run(['pip', 'install', 'es_core_news_md'])
+subprocess.run(['pip', 'install', 'es_core_news_md'])
 
 #archivo = st.file_uploader('Cargar archivo de texto .txt')
 archivo = st.text_input('Inserte texto aqui:', 'texto')
