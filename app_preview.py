@@ -42,11 +42,6 @@ if archivo is not None:
   G = nx.from_pandas_edgelist(pares_df, 'col_a', 'col_b')
   pos = nx.spring_layout(G, k=my_k, iterations=n_iter)
   
-  fig, ax = plt.subplots()
-  nx.draw_networkx_nodes(G, pos, node_color='yellow')
-  
-  st.pyplot(fig)
-  
   labels = {}
   for node in G.nodes():
     labels[node] = node
@@ -59,15 +54,8 @@ if archivo is not None:
   for g in G.nodes.values():
     sizes_btw.append(int(g['size']*3000))
   
-  '''
-  pares_df = pd.DataFrame([['Nodo 1', 'Nodo 2'], ['Nodo 2', 'Nodo 3'], ['Nodo 3', 'Nodo 1']], columns = ['col_a', 'col_b'])
-  G = nx.from_pandas_edgelist(pares_df, 'col_a', 'col_b')
-  pos = nx.spring_layout(G, k=my_k, iterations=n_iter)
-  '''
-
   fig, ax = plt.subplots()
-  #nx.draw_networkx_nodes(G, pos, node_size=sizes_btw, node_color='yellow')
-  nx.draw_networkx_nodes(G, pos, node_color='yellow')
+  nx.draw_networkx_nodes(G, pos, node_size=sizes_btw, node_color='yellow')
   nx.draw_networkx_edges(G, pos, edge_color='gray', width=5.0, alpha=0.3)
-  #nx.draw_networkx_labels(G, pos, labels, font_size=12)  
+  nx.draw_networkx_labels(G, pos, labels, font_size=12)  
   st.pyplot(fig)
