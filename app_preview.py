@@ -15,7 +15,7 @@ archivo = st.text_input('Inserte texto aqui:', '')
 
 if archivo is not None:
   
-  st.write(archivo)
+  #st.write(archivo)
   
   oraciones = archivo.split('.')
   st.write('El número de oraciones de este texto es: ', len(oraciones)-1)
@@ -23,7 +23,7 @@ if archivo is not None:
   depur_tot = pd.DataFrame()
   pares = []
   for ora in oraciones:
-    st.write(ora)
+    #st.write(ora)
     depur = []
     doc = nlp(ora.lower())
     for t in doc:
@@ -37,7 +37,7 @@ if archivo is not None:
     depur_tot = pd.concat([depur_tot, depur_df], axis=0)
     
   pares_df = pd.DataFrame(pares, columns=['col_a', 'col_b'])
-  st.dataframe(depur_tot)
+  st.dataframe(depur_tot.head())
   
   G = nx.from_pandas_edgelist(pares_df, 'col_a', 'col_b')
   pos = nx.spring_layout(G, k=my_k, iterations=n_iter)
