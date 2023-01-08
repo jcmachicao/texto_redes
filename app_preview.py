@@ -62,3 +62,5 @@ if archivo is not None:
   for node, label in nx.draw_networkx_labels(G, pos, labels, font_size=9).items():
     label.set_rotation(45)
   st.pyplot(fig)
+
+st.write('Este aplicativo está desarrollado y auspiciado por [GestioDináamica](https://www.gestiodinamica.com/) 2023')
