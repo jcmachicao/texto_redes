@@ -17,8 +17,7 @@ archivo = st.text_area('Inserte texto aqui:', '')
 if archivo is not None:
   
   #st.write(archivo)
-  st.write('Si no tienes textos disponibles, puedes probar alguno de este documento:
-           ['Ejemplos'](https://docs.google.com/document/d/1vsRH42QTyh6l34_Hh5_nDMj-xclZdOc98ih4vJ23nxU/edit?usp=sharing)')
+  st.write('Si no tienes textos disponibles, puedes probar alguno de este documento. [link](https://docs.google.com/document/d/1vsRH42QTyh6l34_Hh5_nDMj-xclZdOc98ih4vJ23nxU/edit?usp=sharing)')
   
   oraciones = archivo.split('.')
   st.write('El número de oraciones de este texto es: ', len(oraciones)-1)
