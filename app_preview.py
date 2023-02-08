@@ -65,6 +65,6 @@ if archivo is not None:
   
 c1, c2, c3 = st.columns([4,4,4])
 with c3:
-    st.image('gdmklogo.png', width=100, caption='Updated by GestioDinámica in 2022') 
+    st.image('gdmk logo.png', width=100, caption='Updated by GestioDinámica in 2022') 
     
 st.write('Este aplicativo está desarrollado y auspiciado por [GestioDináamica](https://www.gestiodinamica.com/) 2023')
