@@ -62,5 +62,9 @@ if archivo is not None:
   for node, label in nx.draw_networkx_labels(G, pos, labels, font_size=9).items():
     label.set_rotation(45)
   st.pyplot(fig)
-
+  
+c1, c2, c3 = st.columns([4,4,4])
+with c3:
+    st.image('gdmklogo.png', width=100, caption='Updated by GestioDinámica in 2022') 
+    
 st.write('Este aplicativo está desarrollado y auspiciado por [GestioDináamica](https://www.gestiodinamica.com/) 2023')
